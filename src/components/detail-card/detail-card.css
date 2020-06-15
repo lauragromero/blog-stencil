@@ -1,0 +1,22 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Montserrat', sans-serif;
+}
+.detail__title{
+  margin-top: 30px;
+  font-size: 30px;
+}
+.detail__author{
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.detail__date{
+  font-size: 14px;
+  color:  rgb(105, 105, 105);
+}
+.detail__text{
+  margin-top: 20px;
+  line-height: 20pt;
+  text-align: justify;
+}
