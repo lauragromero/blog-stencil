@@ -43,9 +43,9 @@ export class PostComponent implements ComponentInterface {
     return (
       <Host>
       <div class="card__container">
-        {/* <div class="card__image">
+        <div class="card__image">
         <img src="https://cdn.pixabay.com/photo/2020/05/01/19/07/tulips-5118757_1280.jpg" alt="image"/>
-        </div> */}
+        </div>
         <h3 class="card__title">{this.titlePost}</h3>
         <span class="card__date"> {this.transformDate(this.datePost)} by {this.usernamePost}</span>
         <p class="card__content"> {this.textLengt(this.textPost)}</p>

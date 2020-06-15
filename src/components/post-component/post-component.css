@@ -8,14 +8,12 @@
 .card__container{
   box-sizing: border-box;
   width: 350px;
-  height: 300px;
+  height: 500px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin: 0;
-  padding: 10px;
-  background-color: rgb(250, 246, 246);
-  box-shadow: 10px 7px 20px -10px rgba(48, 47, 47, 0.5);
+  
 }
 
 .card__image{

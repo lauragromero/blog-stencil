@@ -19,6 +19,8 @@ export namespace Components {
     }
     interface FooterBlog {
     }
+    interface GridLayout {
+    }
     interface HeaderTemplate {
         "headerTitle": string;
     }
@@ -66,6 +68,12 @@ declare global {
         prototype: HTMLFooterBlogElement;
         new (): HTMLFooterBlogElement;
     };
+    interface HTMLGridLayoutElement extends Components.GridLayout, HTMLStencilElement {
+    }
+    var HTMLGridLayoutElement: {
+        prototype: HTMLGridLayoutElement;
+        new (): HTMLGridLayoutElement;
+    };
     interface HTMLHeaderTemplateElement extends Components.HeaderTemplate, HTMLStencilElement {
     }
     var HTMLHeaderTemplateElement: {
@@ -94,6 +102,7 @@ declare global {
         "detail-card": HTMLDetailCardElement;
         "detail-comment": HTMLDetailCommentElement;
         "footer-blog": HTMLFooterBlogElement;
+        "grid-layout": HTMLGridLayoutElement;
         "header-template": HTMLHeaderTemplateElement;
         "my-component": HTMLMyComponentElement;
         "nav-menu": HTMLNavMenuElement;
@@ -113,6 +122,8 @@ declare namespace LocalJSX {
         "commentText"?: string;
     }
     interface FooterBlog {
+    }
+    interface GridLayout {
     }
     interface HeaderTemplate {
         "headerTitle"?: string;
@@ -146,6 +157,7 @@ declare namespace LocalJSX {
         "detail-card": DetailCard;
         "detail-comment": DetailComment;
         "footer-blog": FooterBlog;
+        "grid-layout": GridLayout;
         "header-template": HeaderTemplate;
         "my-component": MyComponent;
         "nav-menu": NavMenu;
@@ -159,6 +171,7 @@ declare module "@stencil/core" {
             "detail-card": LocalJSX.DetailCard & JSXBase.HTMLAttributes<HTMLDetailCardElement>;
             "detail-comment": LocalJSX.DetailComment & JSXBase.HTMLAttributes<HTMLDetailCommentElement>;
             "footer-blog": LocalJSX.FooterBlog & JSXBase.HTMLAttributes<HTMLFooterBlogElement>;
+            "grid-layout": LocalJSX.GridLayout & JSXBase.HTMLAttributes<HTMLGridLayoutElement>;
             "header-template": LocalJSX.HeaderTemplate & JSXBase.HTMLAttributes<HTMLHeaderTemplateElement>;
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
             "nav-menu": LocalJSX.NavMenu & JSXBase.HTMLAttributes<HTMLNavMenuElement>;
