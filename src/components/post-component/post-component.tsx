@@ -1,4 +1,4 @@
-import { Component, ComponentInterface, Event, EventEmitter, h, Host, Prop } from '@stencil/core';
+import { Component, ComponentInterface, Event, EventEmitter, h, Prop } from '@stencil/core';
 import { textLengt, transformDate } from '../../utils/utils';
 
 @Component({
@@ -8,7 +8,7 @@ import { textLengt, transformDate } from '../../utils/utils';
 })
 export class PostComponent implements ComponentInterface {
 
-  @Prop() titlePost: string;
+  @Prop() titlePost;
   @Prop() usernamePost: string;
   @Prop() datePost: string;
   @Prop() nicknamePost: string;
@@ -21,7 +21,6 @@ export class PostComponent implements ComponentInterface {
   
   render() {
     return (
-      <Host>
       <div class="card__container">
         <div class="card__image">
           <img src="https://cdn.pixabay.com/photo/2020/05/01/19/07/tulips-5118757_1280.jpg" alt="image"/>
@@ -31,7 +30,6 @@ export class PostComponent implements ComponentInterface {
         <p class="card__content"> {textLengt(this.textPost)}</p>
         <button class="card__button" onClick={() => this.onSelect()}>Read More</button>
       </div>
-      </Host>
     );
   }
 

@@ -21,8 +21,17 @@ export namespace Components {
     }
     interface GridLayout {
     }
+    interface HeaderComponent {
+    }
     interface HeaderTemplate {
         "headerTitle": string;
+    }
+    interface ListComponent {
+        "datePost": string;
+        "nicknamePost": string;
+        "textPost": string;
+        "titlePost": any;
+        "usernamePost": string;
     }
     interface MyComponent {
         /**
@@ -45,7 +54,7 @@ export namespace Components {
         "datePost": string;
         "nicknamePost": string;
         "textPost": string;
-        "titlePost": string;
+        "titlePost": any;
         "usernamePost": string;
     }
 }
@@ -74,11 +83,23 @@ declare global {
         prototype: HTMLGridLayoutElement;
         new (): HTMLGridLayoutElement;
     };
+    interface HTMLHeaderComponentElement extends Components.HeaderComponent, HTMLStencilElement {
+    }
+    var HTMLHeaderComponentElement: {
+        prototype: HTMLHeaderComponentElement;
+        new (): HTMLHeaderComponentElement;
+    };
     interface HTMLHeaderTemplateElement extends Components.HeaderTemplate, HTMLStencilElement {
     }
     var HTMLHeaderTemplateElement: {
         prototype: HTMLHeaderTemplateElement;
         new (): HTMLHeaderTemplateElement;
+    };
+    interface HTMLListComponentElement extends Components.ListComponent, HTMLStencilElement {
+    }
+    var HTMLListComponentElement: {
+        prototype: HTMLListComponentElement;
+        new (): HTMLListComponentElement;
     };
     interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
     }
@@ -103,7 +124,9 @@ declare global {
         "detail-comment": HTMLDetailCommentElement;
         "footer-blog": HTMLFooterBlogElement;
         "grid-layout": HTMLGridLayoutElement;
+        "header-component": HTMLHeaderComponentElement;
         "header-template": HTMLHeaderTemplateElement;
+        "list-component": HTMLListComponentElement;
         "my-component": HTMLMyComponentElement;
         "nav-menu": HTMLNavMenuElement;
         "post-component": HTMLPostComponentElement;
@@ -125,8 +148,18 @@ declare namespace LocalJSX {
     }
     interface GridLayout {
     }
+    interface HeaderComponent {
+    }
     interface HeaderTemplate {
         "headerTitle"?: string;
+    }
+    interface ListComponent {
+        "datePost"?: string;
+        "nicknamePost"?: string;
+        "onSelectPost"?: (event: CustomEvent<any>) => void;
+        "textPost"?: string;
+        "titlePost"?: any;
+        "usernamePost"?: string;
     }
     interface MyComponent {
         /**
@@ -150,7 +183,7 @@ declare namespace LocalJSX {
         "nicknamePost"?: string;
         "onSelectPost"?: (event: CustomEvent<any>) => void;
         "textPost"?: string;
-        "titlePost"?: string;
+        "titlePost"?: any;
         "usernamePost"?: string;
     }
     interface IntrinsicElements {
@@ -158,7 +191,9 @@ declare namespace LocalJSX {
         "detail-comment": DetailComment;
         "footer-blog": FooterBlog;
         "grid-layout": GridLayout;
+        "header-component": HeaderComponent;
         "header-template": HeaderTemplate;
+        "list-component": ListComponent;
         "my-component": MyComponent;
         "nav-menu": NavMenu;
         "post-component": PostComponent;
@@ -172,7 +207,9 @@ declare module "@stencil/core" {
             "detail-comment": LocalJSX.DetailComment & JSXBase.HTMLAttributes<HTMLDetailCommentElement>;
             "footer-blog": LocalJSX.FooterBlog & JSXBase.HTMLAttributes<HTMLFooterBlogElement>;
             "grid-layout": LocalJSX.GridLayout & JSXBase.HTMLAttributes<HTMLGridLayoutElement>;
+            "header-component": LocalJSX.HeaderComponent & JSXBase.HTMLAttributes<HTMLHeaderComponentElement>;
             "header-template": LocalJSX.HeaderTemplate & JSXBase.HTMLAttributes<HTMLHeaderTemplateElement>;
+            "list-component": LocalJSX.ListComponent & JSXBase.HTMLAttributes<HTMLListComponentElement>;
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
             "nav-menu": LocalJSX.NavMenu & JSXBase.HTMLAttributes<HTMLNavMenuElement>;
             "post-component": LocalJSX.PostComponent & JSXBase.HTMLAttributes<HTMLPostComponentElement>;

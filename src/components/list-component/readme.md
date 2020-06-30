@@ -1,4 +1,4 @@
-# post-component
+# list-component
 
 
 

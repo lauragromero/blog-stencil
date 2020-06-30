@@ -1,0 +1,26 @@
+:host {
+  display: block;
+}
+
+.header{
+  box-sizing: border-box;
+  height: 250px;
+  width: 100%;
+  padding: 20px;
+  padding-top: 80px;
+  text-align: center;
+  margin: 0 auto 10px auto;
+  background-image: url(https://cdn.pixabay.com/photo/2016/10/05/14/01/background-1716728_1280.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.header__title{
+  font-family: 'Krona One', sans-serif;
+  padding-top: 20px;
+  color: white;
+  font-size: 90px;
+  padding: 10px;
+  margin: 0;
+
+	
+}

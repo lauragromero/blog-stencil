@@ -1,9 +1,9 @@
 :host {
-    width: 100%;
     display: grid;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     gap: 3px 10px;
-    max-width: 1200;
+    width: 1000;
+    margin: 0;
 }

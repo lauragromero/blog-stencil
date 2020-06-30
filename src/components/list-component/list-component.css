@@ -1,0 +1,85 @@
+:host {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+.card__container{
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-top: 6px solid #673AB7;
+  background-color: #ffffff;
+  border-radius: 4px;
+  margin: 10px auto;
+  padding: 40px;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.12), 0 1px 5px 0 rgba(0,0,0,.2);
+}
+.card__header{
+  display:flex;
+  flex-direction: row;
+}
+
+.date__container{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 0;
+  margin-right: 15px;
+}
+
+.date__day{
+  font-size: 40px;
+  color: #f15493;
+  font-weight: 700;
+  line-height: 0.75;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+
+.date__month{
+  padding: 0 10px;
+  text-align: center;
+  font-size: 14px;
+  margin: 0 auto;
+  font-weight: 600;
+}
+.card__image{
+  width: 350px;
+}
+
+.card__image img{
+  width: 100%;
+}
+.card__title{
+  margin: 0;
+  padding: 30px 0 0 0;
+  font-weight: 600;
+  font-size: 40px;
+}
+.card__date{
+  font-size: 12px;
+  color: rgb(88, 88, 88);
+}
+.card__content{
+  font-size: 14px;
+  line-height: 20pt
+}
+.card__button{
+  background-color: rgb(255, 255, 255);
+  border: 1px solid  #f15493;
+  text-transform: uppercase;
+  color: #f15493;
+  width: 150px;
+  padding: 10px;
+  cursor: pointer;
+  transition: all 1s ease;
+}
+
+.card__button:hover{
+  box-sizing: border-box;
+  background-color: #f15493;
+  color:rgb(255, 255, 255);
+}
